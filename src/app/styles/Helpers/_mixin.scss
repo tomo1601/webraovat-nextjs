@@ -1,0 +1,41 @@
+// Định nghĩa mixin ví dụ 
+// @mixin primary-button {
+//   background-color: #007bff;
+//   color: #fff;
+//   padding: 10px 20px;
+//   border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
+// }
+
+// // Sử dụng mixin
+// .button {
+//   @include primary-button;
+// }
+
+// .link-button {
+//   @include primary-button;
+//   text-decoration: none;
+// }
+
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin shadow-grey {
+  box-shadow: 0 0 10px 0 grey;
+  -webkit-box-shadow: 0 0 10px 0 grey;
+  -moz-box-shadow: 0 0 10px 0 grey;
+}
+@mixin grid($columns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns,1fr);
+  gap: #{$gap};
+}
+
+
+@mixin grid-item($row, $column, $span) {
+  grid-row: $row;
+  grid-column: $column / span $span;
+}

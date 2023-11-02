@@ -1,0 +1,30 @@
+.btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: white;
+
+    &:focus,
+    &:hover {
+        background-color: #555; /* Add box shadow on focus/hover */
+    }
+}
+
+.button-primary {
+    @extend .btn;
+    background-color: $bg-primary;
+    &:focus,
+    &:hover {
+        color: #333;
+        border: 2px solid #333;
+    }
+}
+
+.button-outline {
+    @extend .btn;
+
+    &:focus,
+    &:hover {
+        color: #333;
+        border: 2px solid #333;
+    }
+}

@@ -1,0 +1,19 @@
+.footer {
+    color: red;
+    background-color: $bg-secondary;
+
+    @include grid(4, 10px);
+
+    .footer-item {
+        color: $text-primary;
+    }
+
+    @media (max-width: 992px) {
+        @include grid(2, 10px);
+    }
+
+    @media (max-width: 762px) {
+        @include grid(1, 10px);
+    }
+    
+}
