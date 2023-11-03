@@ -17,7 +17,7 @@ interface Book {
 
 export default function Home() {
   const [curentId, setCurrentId] = useState(0)
-  const id = ['d692501c-40d5-4b5e-a1d9-e1154ffc8283','18e96c30-a759-4de0-a7cc-0a87e75ccc04']
+  const id = ['13b2923a-44c0-4b3c-b68f-30d9a065c551','0fa6fdf0-d705-47ef-85c0-83850983b6b1']
   const { data, isLoading } = useQuery(["book", id[curentId]]/* queryKey */,()=>getBookById(id[curentId]) /* ActionWillExe */,{staleTime: 180000} /* Time to need refetch data */);
 
   return (
