@@ -7,6 +7,8 @@ import Footer from "./components/Footer.server";
 import FooterDataFetcher from "./components/Footer.server";
 
 import ReactQueryProvider from "./ReactQueryProvider";
+import Link from "next/link";
+import CreateBook from "./components/CreateBook";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +27,11 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <Header />
+          <Link href='/'>Trang chủ</Link>
+          <br/>
+          <Link href='/dang-nhap'>Đăng nhập</Link>
+          <br/>
+          <CreateBook/>
           {children}
           {/* <FooterDataFetcher /> */}
         </body>
