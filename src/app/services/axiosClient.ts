@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const BASE_URL = "http://thegioitainang.vn/ww2/";
+export const BASE_URL = "http://thegioitainang.com/ww2/";
 export const MEDIA_URL = "http://media.thegiotainang.com/";
 export const MEMBER_URL = "http://thegioitainang.com/ww1/";
 

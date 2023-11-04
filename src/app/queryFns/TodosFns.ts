@@ -25,14 +25,14 @@ export const getBookById = async (id: String) =>
   jsonPlaceholderAxios.get(`/books/${id}`).then((res) => res.data);
 
 const getDataByUrl = async (module: String, url: String) =>
-  jsonFakeDateAxios
-    .get(`${module}`, { params: { url: url } })
+  BaseUrlAxios
+    .get(`${module}`, { params: { id1: url } })
     .then((res) => res.data);
 export const checkUrl = async (url: String) =>
-  jsonFakeDateAxios
-    .get(`allurl`, { params: { url: url } })
+  BaseUrlAxios
+    .get(`web.all.url.asp`, { params: { id1: url } })
     .then((res) =>
-      getDataByUrl(`ChiTiet`, res.data[0].url)
+      getDataByUrl(`module.${res.data[0].module}.asp`, res.data[0].url)
     );
 // export const checkUrl = async (url: String) =>
 //   jsonFakeDateAxios
